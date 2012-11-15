@@ -1,7 +1,7 @@
 {
   "name": "grunt-tmplhtml",
   "description": "Grunt plugin for minifying a set of html files and injecting them into a target html file",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/incandescent/grunt-tmplhtml",
   "contributors": [
     {
@@ -21,16 +21,15 @@
       "url": "https://github.com/incandescent/grunt-tmplmin/blob/master/LICENSE-MIT"
     }
   ],
-  "files": {
+  "files": [
     "tasks"
-  },
+  ],
   "engines": {
     "node": "*"
   },
   "dependencies": {
     "grunt": "~0.3.9",
-    "html-minifier": "~0.4.5",
-    "mkdirp": "~0.3.2"   
+    "html-minifier": "~0.4.5"
   },
   "keywords": [
     "gruntplugin"
