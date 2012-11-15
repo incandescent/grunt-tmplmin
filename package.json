@@ -1,8 +1,8 @@
 {
-  "name": "grunt-tmplhtml",
+  "name": "grunt-tmplmin",
   "description": "Grunt plugin for minifying a set of html files and injecting them into a target html file",
   "version": "0.0.1",
-  "homepage": "https://github.com/incandescent/grunt-tmplhtml",
+  "homepage": "https://github.com/incandescent/grunt-tmplmin",
   "contributors": [
     {
       "name": "Sebastian Golasch"
