@@ -7,23 +7,24 @@ module.exports = function(grunt) {
         dest,
         destContent,
         content = '',
-        bodyRegex = /(<body.*?>)[\s\S]*?(<\/body>)/i;
+        bodyRegex = /(<body.*?>)[\s\S]*?(<\/body>)/i,
+        _ = grunt.util._;
 
     // check if config is valid
-    if (grunt.utils._.isString(this.file.dest) == false) {
+    if (_.isString(this.data.dest) == false) {
       grunt.fatal('Please specify the destination property (must be a string)');
     }
 
-    if (grunt.utils._.isArray(this.file.src) == false && grunt.utils._.isString(this.file.src) == false) {
+    if (_.isArray(this.data.src) == false && _.isString(this.data.src) == false) {
       grunt.fatal('Please specify the source property (must be a string or array)');
     }
 
-    dest = this.file.dest;
-    files = grunt.file.expandFiles(this.file.src);
+    dest = this.data.dest;
+    files = grunt.file.expand(this.data.src);
 
     var destContent = grunt.file.read(dest);
 
-    grunt.utils._(files).each(function (filepath) {
+    _(files).each(function (filepath) {
       content += grunt.file.read(filepath);
     });
 
